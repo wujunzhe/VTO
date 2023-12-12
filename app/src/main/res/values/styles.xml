@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 定义菜单项激活状态颜色 -->
+        <item name="android:itemTextAppearance">@style/MyMenuItemStyle</item>
+    </style>
+
+    <style name="MyMenuItemStyle" parent="@android:style/TextAppearance.Widget.TextView">
+        <!-- 定义激活状态颜色为紫色 -->
+        <item name="android:textColor">@color/menu_active_color</item>
+    </style>
+
+    <!--主页计时模块中文样式-->
+    <style name="home_time_zh_text_style">
+        <item name="android:textSize">@dimen/home_time_zh_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/home_title_text_color</item>
+    </style>
+
+    <style name="home_time_en_text_style">
+        <item name="android:textSize">@dimen/home_time_en_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/home_title_text_en_color</item>
+    </style>
+
+    <!--主页麻醉计时时间样式-->
+    <style name="home_narcosis_time_text_style">
+        <item name="android:gravity">center|center_vertical</item>
+        <item name="android:textSize">@dimen/home_time_text_size</item>
+        <item name="android:textColor">@color/home_narcosis_time_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <!--主页手术计时时间样式-->
+    <style name="home_surgery_time_text_style">
+        <item name="android:gravity">center|center_vertical</item>
+        <item name="android:textSize">@dimen/home_time_text_size</item>
+        <item name="android:textColor">@color/home_surgery_time_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <style name="colon_margin">
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+    <!--主页当前信息标题样式-->
+    <style name="current_info_title_zh_style">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/home_title_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="current_info_title_en_style">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/home_title_text_en_color</item>
+    </style>
+
+    <!-- 当前信息标题文字样式-->
+    <style name="current_info_card_title_style">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/home_title_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 当前信息详细信息字体样式-->
+    <style name="current_info_msg_style">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/home_title_text_color</item>
+    </style>
+</resources>

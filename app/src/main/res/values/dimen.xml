@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mainPagePadding">20dp</dimen> <!-- 首页内边距 -->
+    <dimen name="homeCardPadding">24dp</dimen> <!-- 首页计时模块内边距 -->
+    <dimen name="homeTimeItemHeight">200dp</dimen> <!-- 首页计时模块单列高度 -->
+    <dimen name="homeTimeIconSize">128dp</dimen> <!-- 计时模块图标大小 -->
+    <dimen name="home_time_zh_text_size">32sp</dimen> <!-- 计时模块中文字体大小 -->
+    <dimen name="home_time_en_text_size">20sp</dimen> <!-- 计时模块英文字体大小 -->
+    <dimen name="home_time_ms_margin">24dp</dimen> <!-- 计时模块文字离图标外边距 -->
+    <dimen name="home_time_text_size">64sp</dimen> <!-- 计时模块时间字体大小-->
+    <dimen name="time_card_padding">24dp</dimen> <!-- 时间模块卡片内边距-->
+    <dimen name="current_info_patient_card_width">320dp</dimen> <!-- 患者信息卡片宽度-->
+    <dimen name="current_info_patient_card_height">420dp</dimen> <!-- 患者信息卡片高度-->
+    <dimen name="current_info_icon_size">36dp</dimen> <!--当前信息图标大小-->
+    <dimen name="current_info_doctor_card_height">150dp</dimen> <!--当前信息医生信息卡片高度-->
+    <dimen name="current_info_nurse_card_height">240dp</dimen> <!--当前信息医护团队信息卡片高度-->
+</resources>

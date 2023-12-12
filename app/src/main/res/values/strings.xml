@@ -1,6 +1,38 @@
 <resources>
     <string name="app_name">VTO</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">首页</string>
+    <string name="title_control">环境控制</string>
+    <string name="title_setting">设置</string>
+
+    <!--计时模块string-->
+    <string name="narcosis_time_text_zh">麻醉计时</string>
+    <string name="narcosis_time_text_en">ANESTHESIA TIMING</string>
+    <string name="surgery_time_text_zh">手术计时</string>
+    <string name="surgery_time_text_en">OPERATION TIMING</string>
+    <string name="init_num">00</string>
+    <string name="colon">:</string>
+
+    <!--当前信息模块string-->
+    <string name="current_info_text_zh">当前信息</string>
+    <string name="current_info_text_en">CURRENT INFORMATION</string>
+    <string name="current_info_patient_info">患者信息</string>
+    <string name="current_info_patient_num">患者编号:</string>
+    <string name="current_info_patient_name">患者姓名:</string>
+    <string name="current_info_patient_hospitalization_num">住院号:</string>
+    <string name="current_info_patient_sex">性别:</string>
+    <string name="current_info_patient_age">年龄:</string>
+    <string name="current_info_patient_department">科室:</string>
+    <string name="current_info_surgeon_doctor">主刀医生</string>
+    <string name="current_info_narcosis_doctor">麻醉医生</string>
+    <string name="current_info_doctor_name">医生姓名:</string>
+    <string name="current_info_nurse_group">医护团队</string>
+    <string name="current_info_surgery_type">手术类型:</string>
+    <string name="current_info_risk_level">风险等级:</string>
+    <string name="current_info_itinerant_nurse">巡回护士:</string>
+    <string name="current_info_instrument_nurse">器械护士:</string>
+    <string name="current_info_msg_xxx">XXXXXX</string>
+
+    <!--排班信息部分string-->
+    <string name="scheduling_info_text_zh">排班信息</string>
+    <string name="scheduling_info_text_en">SCHEDULING INFORMATION</string>
 </resources>

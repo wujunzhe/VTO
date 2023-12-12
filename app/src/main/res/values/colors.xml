@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="main_bg_color">#F4F8FF</color> <!--大背景颜色-->
+    <color name="menu_active_color">#536BFF</color> <!--激活的菜单颜色-->
+    <color name="menu_default_color">#969BB9</color> <!--未激活的菜单颜色-->
+    <color name="narcosis_time_bg_color">#E8F6F4</color> <!--麻醉计时背景颜色-->
+    <color name="home_title_text_color">#070928</color> <!-- 主页的标题文字颜色-->
+    <color name="home_title_text_en_color">#ABACB2</color> <!-- 主页的标题文字颜色-->
+    <color name="home_narcosis_time_text_color">#209A88</color> <!--麻醉计时时间颜色-->
+    <color name="home_surgery_time_text_color">#EB6516</color> <!-- 手术计时时间颜色-->
+    <color name="surgery_time_bg_color">#F8EEE8</color> <!-- 手术计时背景颜色-->
+    <color name="current_info_msg_card_color">#F5F7FF</color> <!-- 当前信息模块信息卡片背景颜色-->
 </resources>

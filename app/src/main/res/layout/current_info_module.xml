@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/current_info_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/homeCardPadding">
+            <!--标题部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    style="@style/current_info_title_zh_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/current_info_text_zh" />
+
+                <TextView
+                    style="@style/current_info_title_en_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/current_info_text_en" />
+            </LinearLayout>
+
+            <!-- 信息部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- 左侧患者信息-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/current_info_patient_card_width"
+                            android:layout_height="@dimen/current_info_patient_card_height"
+                            android:background="@color/current_info_msg_card_color"
+                            android:orientation="vertical"
+                            android:padding="@dimen/homeCardPadding">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:ignore="UseCompoundDrawables,UselessParent">
+
+                                <ImageView
+                                    android:layout_width="@dimen/current_info_icon_size"
+                                    android:layout_height="@dimen/current_info_icon_size"
+                                    android:src="@drawable/icon_patient" />
+
+                                <TextView
+                                    style="@style/current_info_card_title_style"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="12dp"
+                                    android:text="@string/current_info_patient_info" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="vertical">
+                                <!--患者编号-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    tools:ignore="UselessParent">
+
+                                    <TextView
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_patient_num"
+                                        tools:ignore="NestedWeights" />
+
+                                    <TextView
+                                        android:id="@+id/current_info_patient_num_text"
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_msg_xxx" />
+                                </LinearLayout>
+                                <!--患者姓名-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="28dp"
+                                    android:layout_weight="1"
+                                    tools:ignore="UselessParent">
+
+                                    <TextView
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_patient_name"
+                                        tools:ignore="NestedWeights" />
+
+                                    <TextView
+                                        android:id="@+id/current_info_patient_name_text"
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_msg_xxx" />
+                                </LinearLayout>
+                                <!--住院号-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="28dp"
+                                    android:layout_weight="1"
+                                    tools:ignore="UselessParent">
+
+                                    <TextView
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_patient_hospitalization_num"
+                                        tools:ignore="NestedWeights" />
+
+                                    <TextView
+                                        android:id="@+id/current_info_hospitalization_num_text"
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_msg_xxx" />
+                                </LinearLayout>
+                                <!--性别-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="28dp"
+                                    android:layout_weight="1"
+                                    tools:ignore="UselessParent">
+
+                                    <TextView
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_patient_sex"
+                                        tools:ignore="NestedWeights" />
+
+                                    <TextView
+                                        android:id="@+id/current_info_sex_text"
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_msg_xxx" />
+                                </LinearLayout>
+                                <!--年龄-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="28dp"
+                                    android:layout_weight="1"
+                                    tools:ignore="UselessParent">
+
+                                    <TextView
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_patient_age"
+                                        tools:ignore="NestedWeights" />
+
+                                    <TextView
+                                        android:id="@+id/current_info_age_text"
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_msg_xxx" />
+                                </LinearLayout>
+                                <!--科室-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="28dp"
+                                    android:layout_weight="1"
+                                    tools:ignore="UselessParent">
+
+                                    <TextView
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_patient_department"
+                                        tools:ignore="NestedWeights" />
+
+                                    <TextView
+                                        android:id="@+id/current_info_patient_department_text"
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_msg_xxx" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <!--右侧信息-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/current_info_doctor_card_height"
+                            android:background="@color/current_info_msg_card_color"
+                            android:padding="@dimen/homeCardPadding">
+                            <!--主刀医生-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/current_info_icon_size"
+                                        android:layout_height="@dimen/current_info_icon_size"
+                                        android:src="@drawable/icon_doctor" />
+
+                                    <TextView
+                                        style="@style/current_info_card_title_style"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="12dp"
+                                        android:text="@string/current_info_surgeon_doctor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="28dp">
+
+                                    <TextView
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_doctor_name" />
+
+                                    <TextView
+                                        android:id="@+id/current_info_surge_doctor_name_text"
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_msg_xxx" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!--麻醉医生-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/current_info_icon_size"
+                                        android:layout_height="@dimen/current_info_icon_size"
+                                        android:src="@drawable/icon_doctor" />
+
+                                    <TextView
+                                        style="@style/current_info_card_title_style"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="12dp"
+                                        android:text="@string/current_info_narcosis_doctor" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="28dp">
+
+                                    <TextView
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_doctor_name" />
+
+                                    <TextView
+                                        android:id="@+id/current_info_narcosis_doctor_name_text"
+                                        style="@style/current_info_msg_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/current_info_msg_xxx" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        card_view:cardUseCompatPadding="true"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/current_info_nurse_card_height"
+                            android:background="@color/current_info_msg_card_color"
+                            android:orientation="vertical"
+                            android:padding="@dimen/homeCardPadding">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/current_info_icon_size"
+                                    android:layout_height="@dimen/current_info_icon_size"
+                                    android:src="@drawable/icon_nurse" />
+
+                                <TextView
+                                    style="@style/current_info_card_title_style"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="12dp"
+                                    android:gravity="center"
+                                    android:text="@string/current_info_nurse_group" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="28dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <!--手术类型-->
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            style="@style/current_info_msg_style"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/current_info_surgery_type"
+                                            tools:ignore="NestedWeights" />
+
+                                        <TextView
+                                            android:id="@+id/current_info_surgery_type_text"
+                                            style="@style/current_info_msg_style"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/current_info_msg_xxx" />
+                                    </LinearLayout>
+                                    <!--风险等级-->
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            style="@style/current_info_msg_style"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/current_info_risk_level"
+                                            tools:ignore="NestedWeights" />
+
+                                        <TextView
+                                            android:id="@+id/current_info_risk_level_text"
+                                            style="@style/current_info_msg_style"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/current_info_msg_xxx" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="24dp">
+                                    <!--巡回护士-->
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            style="@style/current_info_msg_style"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/current_info_itinerant_nurse"
+                                            tools:ignore="NestedWeights" />
+
+                                        <TextView
+                                            android:id="@+id/current_info_itinerant_nurse_text"
+                                            style="@style/current_info_msg_style"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/current_info_msg_xxx" />
+                                    </LinearLayout>
+                                    <!--器械护士-->
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            style="@style/current_info_msg_style"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/current_info_instrument_nurse"
+                                            tools:ignore="NestedWeights" />
+
+                                        <TextView
+                                            android:id="@+id/current_info_instrument_nurse_text"
+                                            style="@style/current_info_msg_style"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/current_info_msg_xxx" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

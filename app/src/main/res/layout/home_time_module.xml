@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/time_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardUseCompatPadding="true"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/time_card_padding"
+            android:orientation="vertical">
+            <!--麻醉计时-->
+            <androidx.cardview.widget.CardView
+                card_view:cardUseCompatPadding="true"
+                android:id="@+id/narcosis_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/homeTimeItemHeight"
+                card_view:cardBackgroundColor="@color/narcosis_time_bg_color"
+                android:padding="@dimen/homeCardPadding"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:baselineAligned="false"
+                    android:padding="@dimen/homeCardPadding"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="@dimen/homeTimeIconSize"
+                                android:layout_height="@dimen/homeTimeIconSize"
+                                android:contentDescription="TODO"
+                                android:src="@drawable/icon_narcosis" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/home_time_ms_margin"
+                                android:orientation="vertical"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    style="@style/home_time_zh_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/narcosis_time_text_zh"
+                                    android:gravity="center_vertical"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/narcosis_time_text_en"
+                                    android:gravity="center_vertical"
+                                    style="@style/home_time_en_text_style"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|end">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            tools:ignore="UselessParent">
+                            <!--小时-->
+                            <TextView
+                                android:id="@+id/narcosis_time_hour"
+                                style="@style/home_narcosis_time_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/init_num" />
+
+                            <TextView
+                                style="@style/home_narcosis_time_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/colon" />
+                            <!--分钟-->
+                            <TextView
+                                android:id="@+id/narcosis_time_min"
+                                style="@style/home_narcosis_time_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/init_num" />
+
+                            <TextView
+                                style="@style/home_narcosis_time_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/colon" />
+                            <!--秒-->
+                            <TextView
+                                android:id="@+id/narcosis_time_sec"
+                                style="@style/home_narcosis_time_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/init_num" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--手术计时计时-->
+            <androidx.cardview.widget.CardView
+                card_view:cardUseCompatPadding="true"
+                android:id="@+id/surgery_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/homeTimeItemHeight"
+                card_view:cardBackgroundColor="@color/surgery_time_bg_color"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/homeCardPadding">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/homeTimeIconSize"
+                                android:layout_height="@dimen/homeTimeIconSize"
+                                android:src="@drawable/icon_surgery" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/home_time_ms_margin"
+                                android:orientation="vertical"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    style="@style/home_time_zh_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/surgery_time_text_zh"
+                                    android:gravity="center_vertical"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/surgery_time_text_en"
+                                    android:gravity="center_vertical"
+                                    style="@style/home_time_en_text_style"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|end">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+                            <!--小时-->
+                            <TextView
+                                android:id="@+id/surgery_time_hour"
+                                style="@style/home_surgery_time_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/init_num" />
+
+                            <TextView
+                                style="@style/home_surgery_time_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/colon" />
+                            <!--分钟-->
+                            <TextView
+                                android:id="@+id/surgery_time_min"
+                                style="@style/home_surgery_time_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/init_num" />
+
+                            <TextView
+                                style="@style/home_surgery_time_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/colon" />
+                            <!--秒-->
+                            <TextView
+                                android:id="@+id/surgery_time_sec"
+                                style="@style/home_surgery_time_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/init_num" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
