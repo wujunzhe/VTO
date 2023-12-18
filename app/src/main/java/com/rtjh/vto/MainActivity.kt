@@ -2,32 +2,30 @@ package com.rtjh.vto
 
 import android.os.Bundle
 import android.view.WindowInsets
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.rtjh.vto.databinding.ActivityMainBinding
+import com.rtjh.vto.databinding.CustomBottomNavigationBinding
 import com.rtjh.vto.helper.BottomNavigationHelper
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding : ActivityMainBinding
+    private lateinit var customBottomNavigationBinding : CustomBottomNavigationBinding
+    private lateinit var bottomNavigationHelper : BottomNavigationHelper
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+        customBottomNavigationBinding = CustomBottomNavigationBinding.bind(binding.navView)
         setContentView(binding.root)
-
-        val navView: BottomNavigationView = binding.navView
-
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        val bottomNavigationHelper = BottomNavigationHelper(this)
-        bottomNavigationHelper.setupWithNavController(navView,navController)
+        bottomNavigationHelper = BottomNavigationHelper(this, customBottomNavigationBinding)
+        val navController = bottomNavigationHelper.getNavController(supportFragmentManager)
+        navController?.let { bottomNavigationHelper.setNavClickListener(it) }
         // 在 Activity 的 onCreate 方法中添加以下代码
         val controller = window.insetsController
         controller?.hide(WindowInsets.Type.statusBars())
     }
+
+
 }

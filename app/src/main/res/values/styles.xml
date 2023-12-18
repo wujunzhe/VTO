@@ -6,6 +6,14 @@
         <item name="android:itemTextAppearance">@style/MyMenuItemStyle</item>
     </style>
 
+    <style name="MyBottomNavigationStyle" parent="Widget.Design.BottomNavigationView">
+        <!-- 设置导航栏高度 -->
+        <item name="android:layout_height">120dp</item> <!-- 根据需求调整高度 -->
+
+        <!-- 设置图标大小 -->
+        <item name="itemIconSize">36dp</item> <!-- 根据需求调整图标大小 -->
+    </style>
+
     <style name="MyMenuItemStyle" parent="@android:style/TextAppearance.Widget.TextView">
         <!-- 定义激活状态颜色为紫色 -->
         <item name="android:textColor">@color/menu_active_color</item>
@@ -71,5 +79,50 @@
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/home_title_text_color</item>
+    </style>
+
+    <style name="table_content_text_style">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/home_title_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="control_dot_text_style">
+        <item name="android:textSize">@dimen/control_air_condition_status_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/control_text_color</item>
+    </style>
+
+    <style name="control_set_text_style">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/control_air_condition_status_text_size</item>
+        <item name="android:textColor">@color/control_text_color</item>
+    </style>
+
+    <style name="control_set_value_style">
+        <item name="android:textSize">56sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/control_text_color</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+    </style>
+
+    <style name="control_set_suffix_style">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/control_text_color</item>
+    </style>
+
+    <style name="control_switch_status_text_style">
+        <item name="android:textColor">@color/control_switch_status_text_color</item>
+        <item name="android:textSize">@dimen/control_air_condition_status_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="control_switch_text_style">
+        <item name="android:textSize">@dimen/control_switch_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/control_text_color</item>
+        <item name="android:layout_marginTop">24dp</item>
     </style>
 </resources>

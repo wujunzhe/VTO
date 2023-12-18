@@ -35,4 +35,25 @@
     <!--排班信息部分string-->
     <string name="scheduling_info_text_zh">排班信息</string>
     <string name="scheduling_info_text_en">SCHEDULING INFORMATION</string>
+    <string name="logo">公司LOGO</string>
+
+    <!-- 空调信息部分string-->
+    <string name="celsius">℃</string>
+    <string name="percent">%</string>
+    <string name="pa">PA</string>
+    <string name="air_condition_status_zh_text">空调状态</string>
+    <string name="air_condition_status_en_text">AIR CONDITION STATUS</string>
+    <string name="tem_text">温度（℃）</string>
+    <string name="hum_text">湿度（PH%）</string>
+    <string name="d_p_text">压差（PA）</string>
+    <string name="set_tem_text">温度</string>
+    <string name="set_hum_text">湿度</string>
+    <string name="set_default_value">00</string>
+    <string name="air_condition_switch_zh_text">空调开关</string>
+    <string name="air_condition_switch_en_text">AIR CONDITION SWITCH</string>
+    <string name="control_air_switch_off">关</string>
+    <string name="light1_text">照明1</string>
+    <string name="light2_text">照明2</string>
+    <string name="po_ne_pressure">正负压</string>
+    <string name="call_clean">呼叫保洁</string>
 </resources>

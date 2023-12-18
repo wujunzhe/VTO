@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/air_condition_status_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/control_card_padding">
+            <!--标题部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    style="@style/current_info_title_zh_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/air_condition_status_zh_text" />
+
+                <TextView
+                    style="@style/current_info_title_en_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/air_condition_status_en_text" />
+            </LinearLayout>
+
+            <!-- 圆环部分 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/air_condition_card_bg_color"
+                    android:baselineAligned="false"
+                    android:paddingStart="@dimen/control_air_condition_card_padding_start"
+                    android:paddingTop="@dimen/control_air_condition_card_padding_top"
+                    android:paddingEnd="@dimen/control_air_condition_card_padding_start"
+                    android:paddingBottom="@dimen/control_air_condition_card_padding_bottom">
+                    <!--温度-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <com.rtjh.vto.view.CircleProgressView
+                            android:id="@+id/temp_circle"
+                            android:layout_width="@dimen/control_circle_size"
+                            android:layout_height="@dimen/control_circle_size"
+                            app:animTime="1000"
+                            app:isGradient="true"
+                            app:isanim="false"
+                            app:mBgCirColor="@color/circle_bg_color"
+                            app:mBgCirWidth="@dimen/control_circle_width"
+                            app:mCirWidth="@dimen/control_circle_width"
+                            app:unit="@string/celsius"
+                            app:value="0"
+                            app:valueColor="@color/circle_value_color"
+                            app:valueSize="@dimen/control_circle_value_size" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center_vertical">
+
+                            <com.rtjh.vto.view.ColoredDotView
+                                android:layout_width="@dimen/control_air_condition_dot_size"
+                                android:layout_height="@dimen/control_air_condition_dot_size"
+                                app:dotColor="@color/tem_dot_color" />
+
+                            <TextView
+                                style="@style/control_dot_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="@string/tem_text" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--湿度-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <com.rtjh.vto.view.CircleProgressView
+                            android:id="@+id/hum_circle"
+                            android:layout_width="@dimen/control_circle_size"
+                            android:layout_height="@dimen/control_circle_size"
+                            app:animTime="1000"
+                            app:isGradient="true"
+                            app:isanim="false"
+                            app:mBgCirColor="@color/circle_bg_color"
+                            app:mBgCirWidth="@dimen/control_circle_width"
+                            app:mCirWidth="@dimen/control_circle_width"
+                            app:unit="@string/percent"
+                            app:value="0"
+                            app:valueColor="@color/circle_value_color"
+                            app:valueSize="@dimen/control_circle_value_size" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center_vertical">
+
+                            <com.rtjh.vto.view.ColoredDotView
+                                android:layout_width="@dimen/control_air_condition_dot_size"
+                                android:layout_height="@dimen/control_air_condition_dot_size"
+                                app:dotColor="@color/hum_dot_color" />
+
+                            <TextView
+                                style="@style/control_dot_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="@string/hum_text" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--压差-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <com.rtjh.vto.view.CircleProgressView
+                            android:id="@+id/different_pressure_circle"
+                            android:layout_width="@dimen/control_circle_size"
+                            android:layout_height="@dimen/control_circle_size"
+                            app:animTime="1000"
+                            app:isGradient="true"
+                            app:isanim="false"
+                            app:mBgCirColor="@color/circle_bg_color"
+                            app:mBgCirWidth="@dimen/control_circle_width"
+                            app:mCirWidth="@dimen/control_circle_width"
+                            app:unit="@string/pa"
+                            app:value="0"
+                            app:valueColor="@color/circle_value_color"
+                            app:valueSize="@dimen/control_circle_value_size" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center_vertical">
+
+                            <com.rtjh.vto.view.ColoredDotView
+                                android:layout_width="@dimen/control_air_condition_dot_size"
+                                android:layout_height="@dimen/control_air_condition_dot_size"
+                                app:dotColor="@color/d_p_dot_color" />
+
+                            <TextView
+                                style="@style/control_dot_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="@string/d_p_text" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 温湿度设置部分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/air_condition_card_bg_color"
+                        android:orientation="vertical"
+                        android:padding="@dimen/control_set_card_padding">
+
+                        <TextView
+                            style="@style/control_set_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/set_tem_text" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp">
+                            <!--加号-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/control_set_p_i_width"
+                                android:layout_height="@dimen/control_set_p_i_height"
+                                app:cardBackgroundColor="@color/control_set_card_bg_color"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="4dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:id="@+id/tem_plus_ll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/custom_plus" />
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!-- 数值-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/control_set_value_width"
+                                android:layout_height="@dimen/control_set_p_i_height"
+                                app:cardBackgroundColor="@color/control_set_card_bg_color"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="4dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/control_set_icon_size"
+                                        android:layout_height="@dimen/control_set_icon_size"
+                                        android:src="@drawable/icon_tem" />
+
+                                    <TextView
+                                        android:id="@+id/tem_set_value"
+                                        style="@style/control_set_value_style"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/set_default_value" />
+
+                                    <TextView
+                                        style="@style/control_set_suffix_style"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:paddingTop="10dp"
+                                        android:text="@string/celsius" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <!--减号-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/control_set_p_i_width"
+                                android:layout_height="@dimen/control_set_p_i_height"
+                                app:cardBackgroundColor="@color/control_set_card_bg_color"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="4dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:id="@+id/tem_minus_ll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/custom_minus" />
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/air_condition_card_bg_color"
+                        android:orientation="vertical"
+                        android:padding="@dimen/control_set_card_padding">
+
+                        <TextView
+                            style="@style/control_set_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/set_hum_text" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp">
+                            <!--加号-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/control_set_p_i_width"
+                                android:layout_height="@dimen/control_set_p_i_height"
+                                app:cardBackgroundColor="@color/control_set_card_bg_color"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="4dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:id="@+id/hum_plus_ll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/custom_plus" />
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!-- 数值-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/control_set_value_width"
+                                android:layout_height="@dimen/control_set_p_i_height"
+                                app:cardBackgroundColor="@color/control_set_card_bg_color"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="4dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/control_set_icon_size"
+                                        android:layout_height="@dimen/control_set_icon_size"
+                                        android:src="@drawable/icon_hum" />
+
+                                    <TextView
+                                        android:id="@+id/hum_set_value"
+                                        style="@style/control_set_value_style"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/set_default_value" />
+
+                                    <TextView
+                                        style="@style/control_set_suffix_style"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:paddingTop="10dp"
+                                        android:text="@string/percent" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <!--减号-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/control_set_p_i_width"
+                                android:layout_height="@dimen/control_set_p_i_height"
+                                app:cardBackgroundColor="@color/control_set_card_bg_color"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="4dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:id="@+id/hum_minus_ll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/custom_minus" />
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/air_condition_switch_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/control_card_padding">
+            <!--标题部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    style="@style/current_info_title_zh_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/air_condition_switch_zh_text" />
+
+                <TextView
+                    style="@style/current_info_title_en_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/air_condition_switch_en_text" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/control_switch_card_height"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true"
+                    app:cardBackgroundColor="@color/control_set_card_bg_color">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/control_switch_card_paddingTop"
+                        android:paddingStart="@dimen/control_switch_card_paddingStart"
+                        android:paddingEnd="@dimen/control_switch_card_paddingStart"
+                        android:paddingBottom="@dimen/control_switch_card_paddingTop">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/control_air_switch_off"
+                                    style="@style/control_switch_status_text_style"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="end">
+                                <com.suke.widget.SwitchButton
+                                    android:id="@+id/lighting1_switch"
+                                    android:layout_width="@dimen/control_switch_width"
+                                    android:layout_height="@dimen/control_switch_height"
+                                    app:sb_checked_color="@color/control_switch_checked_color"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="@dimen/control_switch_icon_size"
+                                android:layout_height="@dimen/control_switch_icon_size"
+                                android:src="@drawable/img_light1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/light1_text"
+                                style="@style/control_switch_text_style"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/control_switch_card_height"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true"
+                    app:cardBackgroundColor="@color/control_set_card_bg_color">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/control_switch_card_paddingTop"
+                        android:paddingStart="@dimen/control_switch_card_paddingStart"
+                        android:paddingEnd="@dimen/control_switch_card_paddingStart"
+                        android:paddingBottom="@dimen/control_switch_card_paddingTop">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/control_air_switch_off"
+                                    style="@style/control_switch_status_text_style"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="end">
+                                <com.suke.widget.SwitchButton
+                                    android:id="@+id/lighting2_switch"
+                                    android:layout_width="@dimen/control_switch_width"
+                                    android:layout_height="@dimen/control_switch_height"
+                                    app:sb_checked_color="@color/control_switch_checked_color"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="@dimen/control_switch_icon_size"
+                                android:layout_height="@dimen/control_switch_icon_size"
+                                android:src="@drawable/img_light2"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/light2_text"
+                                style="@style/control_switch_text_style"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/control_switch_card_height"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true"
+                    app:cardBackgroundColor="@color/control_set_card_bg_color">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/control_switch_card_paddingTop"
+                        android:paddingStart="@dimen/control_switch_card_paddingStart"
+                        android:paddingEnd="@dimen/control_switch_card_paddingStart"
+                        android:paddingBottom="@dimen/control_switch_card_paddingTop">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/control_air_switch_off"
+                                    style="@style/control_switch_status_text_style"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="end">
+                                <com.suke.widget.SwitchButton
+                                    android:id="@+id/po_ne_pressure_switch"
+                                    android:layout_width="@dimen/control_switch_width"
+                                    android:layout_height="@dimen/control_switch_height"
+                                    app:sb_checked_color="@color/control_switch_checked_color"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="@dimen/control_switch_icon_size"
+                                android:layout_height="@dimen/control_switch_icon_size"
+                                android:src="@drawable/img_pressure"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/po_ne_pressure"
+                                style="@style/control_switch_text_style"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/control_switch_card_height"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true"
+                    app:cardBackgroundColor="@color/control_set_card_bg_color">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/control_switch_card_paddingTop"
+                        android:paddingStart="@dimen/control_switch_card_paddingStart"
+                        android:paddingEnd="@dimen/control_switch_card_paddingStart"
+                        android:paddingBottom="@dimen/control_switch_card_paddingTop">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/control_air_switch_off"
+                                    style="@style/control_switch_status_text_style"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="end">
+                                <com.suke.widget.SwitchButton
+                                    android:id="@+id/call_clean_switch"
+                                    android:layout_width="@dimen/control_switch_width"
+                                    android:layout_height="@dimen/control_switch_height"
+                                    app:sb_checked_color="@color/control_switch_checked_color"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="@dimen/control_switch_icon_size"
+                                android:layout_height="@dimen/control_switch_icon_size"
+                                android:src="@drawable/img_call"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/call_clean"
+                                style="@style/control_switch_text_style"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

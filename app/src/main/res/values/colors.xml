@@ -8,8 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main_bg_color">#F4F8FF</color> <!--大背景颜色-->
+    <color name="top_module_bg_color">#e5eaf3</color>
+    <color name="top_module_text_color">#506CFE</color>
     <color name="menu_active_color">#536BFF</color> <!--激活的菜单颜色-->
     <color name="menu_default_color">#969BB9</color> <!--未激活的菜单颜色-->
+    <color name="menu_text_default_color">#969BB9</color>
     <color name="narcosis_time_bg_color">#E8F6F4</color> <!--麻醉计时背景颜色-->
     <color name="home_title_text_color">#070928</color> <!-- 主页的标题文字颜色-->
     <color name="home_title_text_en_color">#ABACB2</color> <!-- 主页的标题文字颜色-->
@@ -17,4 +20,22 @@
     <color name="home_surgery_time_text_color">#EB6516</color> <!-- 手术计时时间颜色-->
     <color name="surgery_time_bg_color">#F8EEE8</color> <!-- 手术计时背景颜色-->
     <color name="current_info_msg_card_color">#F5F7FF</color> <!-- 当前信息模块信息卡片背景颜色-->
+    <color name="table_title_bg_color">#E1E9FF</color>
+    <color name="table_content_bg_color">#F5F7FF</color>
+    <color name="air_condition_card_bg_color">#F5F7FF</color>
+    <color name="circle_bg_color">#E7EDFD</color> <!-- 圆环背景色-->
+    <color name="circle_value_color">#070928</color>
+    <color name="tem_circle_start_color">#FFBD6F</color> <!-- 温度圆环起始颜色 -->
+    <color name="tem_circle_end_color">#FF8A45</color> <!-- 温度圆环结束颜色 -->
+    <color name="hum_circle_start_color">#61EAD6</color> <!-- 湿度圆环起始颜色 -->
+    <color name="hum_circle_end_color">#32D1AD</color> <!-- 湿度圆环结束颜色 -->
+    <color name="d_p_circle_start_color">#6CCEFF</color> <!-- 压差圆环起始颜色 -->
+    <color name="d_p_circle_end_color">#6691F4</color> <!-- 压差圆环结束颜色 -->
+    <color name="tem_dot_color">#FF7829</color> <!--温度小圆点颜色 -->
+    <color name="hum_dot_color">#57E5CE</color> <!--湿度小圆点颜色 -->
+    <color name="d_p_dot_color">#679CF6</color> <!--压差小圆点颜色 -->
+    <color name="control_text_color">#070928</color> <!-- 文字颜色 -->
+    <color name="control_set_card_bg_color">#E7F0FF</color>
+    <color name="control_switch_status_text_color">#506CFD</color>
+    <color name="control_switch_checked_color">#506CFE</color>
 </resources>

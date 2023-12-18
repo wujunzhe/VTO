@@ -1,44 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
-    android:padding="@dimen/mainPagePadding">
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_container_height"
+        android:orientation="vertical"
+        android:padding="@dimen/mainPagePadding">
+        <LinearLayout
+            android:id="@+id/time_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/home_time_module"/>
 
-    <LinearLayout
-        android:id="@+id/top_ll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/time_ll">
-        <include layout="@layout/top_module" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/time_ll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/top_ll"
-        app:layout_constraintBottom_toTopOf="@id/current_info_ll">
-        <include layout="@layout/home_time_module"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/current_info_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/current_info_module"/>
+        </LinearLayout>
 
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/current_info_ll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/time_ll">
-        <include layout="@layout/current_info_module"/>
+        <LinearLayout
+            android:id="@+id/scheduling_info_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/scheduling_info_module"/>
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/scheduling_info_ll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/current_info_ll"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <include layout="@layout/scheduling_info_module"/>
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

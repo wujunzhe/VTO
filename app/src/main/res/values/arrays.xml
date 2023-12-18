@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="tem_circle_gradient_colors">
+        <item>@color/tem_circle_start_color</item>
+        <item>@color/tem_circle_end_color</item>
+    </array>
+</resources>

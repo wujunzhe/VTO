@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="main_container_height">1700dp</dimen>
+    <dimen name="top_module_height">150dp</dimen>
+    <dimen name="top_module_text_size">72sp</dimen>
+    <dimen name="concave_height">100dp</dimen>
+    <dimen name="concave_width">240dp</dimen>
+    <dimen name="concave_radius">20dp</dimen>
+    <dimen name="bottomNavHeight">120dp</dimen> <!-- 导航高度 -->
+    <dimen name="bottomNavIconSize">36dp</dimen> <!-- 导航栏图标大小 -->
+    <dimen name="bottomNavTextSize">24sp</dimen> <!-- 导航栏字体大小-->
     <dimen name="mainPagePadding">20dp</dimen> <!-- 首页内边距 -->
     <dimen name="homeCardPadding">24dp</dimen> <!-- 首页计时模块内边距 -->
     <dimen name="homeTimeItemHeight">200dp</dimen> <!-- 首页计时模块单列高度 -->
@@ -14,4 +23,26 @@
     <dimen name="current_info_icon_size">36dp</dimen> <!--当前信息图标大小-->
     <dimen name="current_info_doctor_card_height">150dp</dimen> <!--当前信息医生信息卡片高度-->
     <dimen name="current_info_nurse_card_height">240dp</dimen> <!--当前信息医护团队信息卡片高度-->
+    <dimen name="control_card_padding">25dp</dimen> <!-- 环境控制模块卡片内边距-->
+    <dimen name="control_circle_width">24sp</dimen> <!-- 环境控制模块圆环宽度 -->
+    <dimen name="control_circle_value_size">56sp</dimen> <!-- 环境控制模块圆环内value字体大小 -->
+    <dimen name="control_air_condition_card_padding_top">20dp</dimen> <!-- 环境控制卡片空调状态卡片内边距-->
+    <dimen name="control_air_condition_card_padding_bottom">40dp</dimen><!-- 环境控制卡片空调状态卡片内边距-->
+    <dimen name="control_air_condition_card_padding_start">60dp</dimen><!-- 环境控制卡片空调状态卡片内边距-->
+    <dimen name="control_circle_size">200dp</dimen> <!-- 环境控制空调状态圆环尺寸-->
+    <dimen name="control_air_condition_dot_size">12dp</dimen> <!-- 空调状态描述小圆点尺寸-->
+    <dimen name="control_air_condition_status_text_size">24sp</dimen><!-- 空调状态文字大小 -->
+    <dimen name="control_set_card_padding">24dp</dimen> <!-- 设置卡片内边距-->
+    <dimen name="control_set_p_i_size">28sp</dimen> <!-- 加减号尺寸 -->
+    <dimen name="control_set_p_i_height">90dp</dimen> <!-- 加减号卡片高度-->
+    <dimen name="control_set_p_i_width">72dp</dimen> <!-- 加减号卡片宽度-->
+    <dimen name="control_set_value_width">272dp</dimen> <!--温湿度值卡片宽度 -->
+    <dimen name="control_set_icon_size">42dp</dimen> <!-- 温湿度值icon尺寸-->
+    <dimen name="control_switch_card_height">405dp</dimen> <!-- 开关卡片高度 -->
+    <dimen name="control_switch_icon_size">136dp</dimen> <!-- 开关icon尺寸 -->
+    <dimen name="control_switch_card_paddingTop">24dp</dimen> <!-- 开关卡片内边距 -->
+    <dimen name="control_switch_card_paddingStart">32dp</dimen><!-- 开关卡片内边距 -->
+    <dimen name="control_switch_width">64dp</dimen> <!-- 开关switch尺寸-->
+    <dimen name="control_switch_height">32dp</dimen><!-- 开关switch尺寸-->
+    <dimen name="control_switch_text_size">28sp</dimen>
 </resources>
